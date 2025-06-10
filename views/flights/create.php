@@ -64,17 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <form method="POST">
         <div class="mb-3">
-            <label class="form-label pb-1">Airline</label>
-            <select name="airline_id" class="form-control" required>
-                <option value="" disabled selected>-- Select Airline --</option>
-                <?php foreach ($airlines as $airline): ?>
-                    <option value="<?= $airline->id ?>" <?= $airline->id == $airline_id ? 'selected' : '' ?>>
-                        <?= $airline->name ?>
-                    </option>
-                <?php endforeach ?>
-            </select>
-        </div>
-        <div class="mb-3">
             <label class="form-label pb-1">Departure Airport</label>
             <select name="origin_id" class="form-control" required>
                 <option value="" disabled selected>-- Select Airport --</option>
@@ -92,6 +81,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php foreach ($airports as $airport): ?>
                     <option value="<?= $airport->id ?>" <?= $airport->id == $destination_id ? 'selected' : '' ?>>
                         <?= $airport->name ?> (<?= $airport->iata ?>)
+                    </option>
+                <?php endforeach ?>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label pb-1">Airline</label>
+            <select name="airline_id" class="form-control" required>
+                <option value="" disabled selected>-- Select Airline --</option>
+                <?php foreach ($airlines as $airline): ?>
+                    <option value="<?= $airline->id ?>" <?= $airline->id == $airline_id ? 'selected' : '' ?>>
+                        <?= $airline->name ?>
                     </option>
                 <?php endforeach ?>
             </select>
