@@ -6,7 +6,7 @@ use App\Database\FlightDAO;
 $id = $_GET['id'];
 $FlightDAO = new FlightDAO();
 $FlightDAO->delete($id);
-$_SESSION['sucmsg'] = "Flight status successfully deleted.";
+$_SESSION['sucmsg'] = "Flight schedule successfully deleted.";
 
 header('Location: /flights');
 exit;
