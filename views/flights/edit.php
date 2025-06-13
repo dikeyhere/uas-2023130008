@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $newstatus = $_POST['status'];
     $FlightDAO->update($flight->id, $newstatus);
     $_SESSION['sucmsg'] = "Flight status successfully updated.";
-    header('Location: /flights');
+    header('Location: /');
     exit;
 }
 
@@ -67,8 +67,8 @@ require_once __DIR__ . '/../../views/templates/header.php';
             </div>
 
             <div class="text-center mt-1 mb-3 ps-0 pe-5 ms-0 me-0">
-                <button type="submit" class="btn btn-primary">Save Change</button>
-                <a href="/flights" class="btn btn-secondary">Back</a>
+                <button type="submit" class="btn btn-success">Save Change</button>
+                <a href="/" class="btn btn-secondary">Back</a>
             </div>
 
         </div>

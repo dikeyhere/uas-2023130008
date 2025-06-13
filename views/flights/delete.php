@@ -8,5 +8,5 @@ $FlightDAO = new FlightDAO();
 $FlightDAO->delete($id);
 $_SESSION['sucmsg'] = "Flight schedule successfully deleted.";
 
-header('Location: /flights');
+header('Location: /');
 exit;

@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
 
         $FlightDAO->create($flight);
-        header('Location: /flights');
+        header('Location: /');
         exit;
     }
 }
@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <div class="text-center pt-2 pe-5">
             <button class="btn btn-success">Save Flight</button>
-            <a href="/flights" class="btn btn-secondary">Back</a>
+            <a href="/" class="btn btn-secondary">Back</a>
         </div>
     </form>
 </div>

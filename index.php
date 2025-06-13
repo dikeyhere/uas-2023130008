@@ -6,7 +6,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 $router = new AltoRouter();
 
-$router->map('GET', '/flights', function () {
+$router->map('GET', '/', function () {
     require __DIR__ . '/views/flights/all.php';
 });
 $router->map('GET|POST', '/flights/create', function () {
